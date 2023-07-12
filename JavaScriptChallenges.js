@@ -266,4 +266,18 @@ function removeFalsyValues(inputArray)
     return cleanArray;
 }
 
-console.log(removeFalsyValues(angArr5));
+//console.log(removeFalsyValues(angArr5));
+
+/**
+ * 
+ * Question 6:
+Write a JavaScript function called calculateAverage that takes an array of numbers as input and returns the average (mean) value of the numbers. Round the result to two decimal places.
+
+Example:
+Input: [5, 10, 15, 20]
+Output: 12.50
+
+Input: [1, 3, 5, 7, 9]
+Output: 5.00
+ */
+
