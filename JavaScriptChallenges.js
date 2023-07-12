@@ -279,5 +279,21 @@ Output: 12.50
 
 Input: [1, 3, 5, 7, 9]
 Output: 5.00
+
  */
 
+
+function calculateAverage(inputArray)
+{
+    var numTotal = 0;
+
+    inputArray.forEach(function(item, index){
+        numTotal += item;
+    });
+
+    return (numTotal / inputArray.length).toFixed(2);
+}
+
+const angArr6 = [1, 3, 5, 7, 9];
+
+console.log(calculateAverage(angArr6));
