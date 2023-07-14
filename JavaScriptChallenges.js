@@ -296,4 +296,49 @@ function calculateAverage(inputArray)
 
 const angArr6 = [1, 3, 5, 7, 9];
 
-console.log(calculateAverage(angArr6));
+//console.log(calculateAverage(angArr6));
+
+/**
+ * 
+ * Question 7:
+Write a JavaScript function called removeDuplicatesCaseInsensitive that takes an array of strings as input and returns a new array with all the duplicate strings removed. The comparison should be case-insensitive, meaning that strings with the same characters in different cases should be considered duplicates and only one occurrence should be included in the resulting array. The order of the remaining strings should be preserved.
+
+Example:
+Input: ["apple", "Orange", "banana", "orange", "APPLE"]
+Output: ["apple", "Orange", "banana"]
+
+Input: ["cat", "DOG", "cat", "dog", "Cat"]
+Output: ["cat", "DOG"]
+ * 
+ */
+
+function removeDuplicatesCaseInsensitive(inputArray)
+{
+    var arrTempFiltered = [];
+
+    inputArray.forEach((element) => {
+        var arrFilteredLowered = [];
+
+        if (arrTempFiltered.length > 0) 
+        {
+            arrFilteredLowered = arrTempFiltered.map(element => element.toLowerCase());
+
+            if (arrFilteredLowered.indexOf(element.toLocaleLowerCase()) === -1)
+            {
+                arrTempFiltered.push(element);
+            }
+        }
+        else
+        {
+            arrTempFiltered.push(element);
+        }
+    });
+
+    return arrTempFiltered;
+}
+
+const arr7 = ["cat", "DOG", "cat", "dog", "Cat"];
+
+console.log(removeDuplicatesCaseInsensitive(arr7));
+
+
